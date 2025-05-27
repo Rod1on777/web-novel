@@ -1,0 +1,773 @@
+<!-- All music for the project was taken from the sampleswap website and is not subject to copyright. -->
+<!-- https://sampleswap.org/ -->
+
+<!-- All background and character images were created using the Gemini AI. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <!-- title font
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+     -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- regular font
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+    <!-- scary font
+    font-family: "Eater", serif;
+    font-weight: 400;
+    font-style: normal;
+    -->
+
+
+    <title>Dark Trails of Zarechye</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <audio id="sound1">
+            <source src="music/beep.WAV" type="audio/wav">
+        </audio>
+        <audio id="bgm1" loop>
+            <source src="music/093_pretty-guitar-arpeggio.wav" type="audio/wav">
+        </audio>
+        <audio id="bgm2" loop>
+            <source src="music/089_backwards-acoustic-guitar-looper.wav" type="audio/wav">
+        </audio>
+        <audio id="bgm3" loop>
+            <source src="music/072_the-mystery-begins-guitar-space.wav" type="audio/wav">
+        </audio>
+        <audio id="bgm4" loop>
+            <source src="music/096_a-minor-guitar-pluck-intro.wav" type="audio/wav">
+        </audio>
+        <audio id="bgm5" loop>
+            <source src="music/085_commodore-64-moody-bassline.wav" type="audio/wav">
+        </audio>
+        <audio id="bgm6" loop>
+            <source src="music/081_picked_guitar_sadmelody.wav" type="audio/wav">
+        </audio>
+        <audio id="bgm7" loop>
+            <source src="music/074_acoustic-guitar-strummy1.wav" type="audio/wav">
+        </audio>
+        <audio id="bgm8" loop>
+            <source src="music/063-violin-bass-smog-a.wav" type="audio/wav">
+        </audio>
+        <audio id="bgm9" loop>
+            <source src="music/055_slow-ballad-guitar-strings.wav" type="audio/wav">
+        </audio>
+
+        <div id="main-menu" class="scene active">
+            <h1>Dark Trails of Zarechye</h1>
+            <button id="start-button">Begin a story <b>⇛</b></button>
+        </div>
+
+        <div id="volume-slider-container">
+            <input type="range" id="volume-slider" min="0" max="100" value="100">
+        </div>
+
+        <div id="scene-selector-container">
+            <select id="scene-selector">
+                <option value="29">Warning: This feature should not be in the game and is only left for marking the
+                    task.
+                </option>
+                <option value="29">It is suitable for testing the functionality of a particular scene. But its use can
+                    lead to a breakdown of the overall logic.
+                </option>
+                <option value="29">To avoid any breakages, it is recommended to play the game from the very beginning,
+                    as
+                    intended by the developer.
+                </option>
+                <option value="29">If you do encounter bugs or incorrect functionality due to using this feature, simply
+                    reload the page.
+                </option>
+                <option value="2">Scene 2</option>
+                <option value="3">Scene 3</option>
+                <option value="4">Scene 4</option>
+                <option value="5">Scene 5</option>
+                <option value="6">Scene 6</option>
+                <option value="7">Scene 7</option>
+                <option value="8">Scene 8</option>
+                <option value="9">Scene 9</option>
+                <option value="10">Scene 10</option>
+                <option value="11">Scene 11</option>
+                <option value="12">Scene 12</option>
+                <option value="13">Scene 13</option>
+                <option value="14">Scene 14</option>
+                <option value="15">Scene 15</option>
+                <option value="16">Scene 16</option>
+                <option value="17">Scene 17</option>
+                <option value="18">Scene 18</option>
+                <option value="19">Scene 19</option>
+                <option value="20">Scene 20</option>
+                <option value="21">Scene 21</option>
+                <option value="22">Scene 22</option>
+                <option value="23">Scene 23</option>
+                <option value="24">Scene 24</option>
+                <option value="25">Scene 25</option>
+                <option value="26">Scene 26</option>
+                <option value="27">Scene 27</option>
+                <option value="28">Scene 28</option>
+                <option value="game1">Scene game1</option>
+                <option value="game2">Scene game2</option>
+                <option value="vid">Video</option>
+            </select>
+            <button id="go-to-scene-button">Go</button>
+        </div>
+
+        <div id="game-over-menu" class="scene">
+            <h1>It's over.</h1>
+            <h2>You couldn't save yourself, and you couldn't save your brother... </h2>
+            <button class="restart-button">Restart story <b>⇛</b></button>
+        </div>
+
+        <div id="game-over-neutral" class="scene">
+            <h1>Ending 1: Neutral</h1>
+            <h2>Andrey and Dimka get home safe and sound. Andrey realizes that the shift supervisor is involved in
+                something dark, possibly related to ancient
+                beliefs and the creature they saw in the forest. They decide to leave Zarechye as soon as possible
+                without telling anyone what happened. Karachun remains in the taiga, and Andrey takes with him a heavy
+                knowledge that ancient evil has not disappeared. </h2>
+            <button class="restart-button">Restart story <b>⇛</b></button>
+        </div>
+
+        <div id="game-over-bad" class="scene">
+            <h1>Ending 2: Bad</h1>
+            <h2>The ritual fails catastrophically. The ancient entity invades Andrey's mind and body, his pleas for
+                release futile. His eyes become chillingly luminous, his voice a distorted echo. Karachun fully
+                possesses him, extinguishing Andrey's humanity and turning him into a vessel for its malevolent will,
+                ready to unleash its icy reign.</h2>
+            <button class="restart-button">Restart story <b>⇛</b></button>
+        </div>
+
+        <div id="game-over-good" class="scene">
+            <h1>Ending 3: Good</h1>
+            <h2>The ritual is a success. Andrey's heartfelt incantation, combined with Taisiya's ancient knowledge and
+                the power of their combined will, forces Karachun back into the shadows. The storm subsides, and a sense
+                of peace returns to the land. The immediate threat to Dimka is lifted. Exhausted but triumphant, Andrey
+                and Dimka, guided by Taisiya's wisdom, manage to leave the cursed lands. They return home safely,
+                forever changed by their encounter with the ancient darkness, but whole and together.</h2>
+            <button class="restart-button">Restart story <b>⇛</b></button>
+        </div>
+
+        <div id="novel-container">
+            <div id="scene-1" class="scene">
+                <div class="background"><img src="images/bg1.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/phone.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Telephone beeps</p>
+                    <p class="dialogue" style="color: #525252;">(beep... beep... beep...)</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-2" class="scene">
+                <div class="background"><img src="images/bg2.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char1.png">
+                </div>
+                <div class="character2-container">
+                    <img src="characters/char2.png">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">The next day arrived...</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-3" class="scene">
+                <div class="background"><img src="images/bg2.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/phone.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey steps aside and nervously dials the shift
+                        supervisor's number that his brother gave him.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-4" class="scene">
+                <div class="background"><img src="images/bg3.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char5.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey goes to bed and has a nightmare...</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-5" class="scene">
+                <div class="background"><img src="images/bg2.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char2.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey meets his grandfather in the morning</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-6" class="scene">
+                <div class="background"><img src="images/bg4.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character"></div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #737373;">Andrey's Thoughts</p>
+                    <p class="dialogue" style="color: #737373;">A delay... Why do I feel so uneasy then?</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-7" class="scene">
+                <div class="background"><img src="images/bg5.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char3.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">The snowy road ends at a lit gate with a guardhouse.
+                        Andrey stops the car, lowers the window.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-8" class="scene">
+                <div class="reputation-bar">
+                    <div class="reputation-value-bar">
+                        <div class="reputation-value"></div>
+                    </div>
+                    <span class="reputation-label">Filimon Reputation</span>
+                </div>
+                <div class="background"><img src="images/bg6.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char3.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey enters Filimon's Guardhouse.</p>
+                </div>
+                <div class="choices">
+                    <button class="choice-button1" data-reputation-change="+15">1</button>
+                    <button class="choice-button2" data-reputation-change="+5">2</button>
+                    <button class="choice-button3" data-reputation-change="-15">3</button>
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-9" class="scene">
+                <div class="reputation-bar">
+                    <div class="reputation-value-bar">
+                        <div class="reputation-value"></div>
+                    </div>
+                    <span class="reputation-label">Supervisor Reputation</span>
+                </div>
+                <div class="background"><img src="images/bg7.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char4.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Morning...</p>
+                </div>
+                <div class="choices">
+                    <button class="choice-button1" data-reputation-change="+10">1</button>
+                    <button class="choice-button2" data-reputation-change="-5">2</button>
+                    <button class="choice-button3" data-reputation-change="-10">3</button>
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-10" class="scene">
+                <div class="background"><img src="images/bg6.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char3.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey makes a dash for the door.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-11" class="scene">
+                <div class="background"><img src="images/bg3.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="">
+                </div>
+                <div class="character2-container">
+                    <img src="characters/badguy2.png" style="width: 58vh;">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey Pushing past Filimon.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="video-scene" class="scene">
+                <video id="story-video" controls>
+                    <source src="images/0514.mp4" type="video/mp4">
+                </video>
+                <button class="skip-button">Skip ⮕</button>
+            </div>
+
+            <div id="scene-12" class="scene">
+                <div class="reputation-bar">
+                    <div class="reputation-value-bar">
+                        <div class="reputation-value"></div>
+                    </div>
+                    <span class="reputation-label">Supervisor Reputation</span>
+                </div>
+                <div class="background"><img src="images/bg7.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #000000;">Andrey</p>
+                    <p class="dialogue" style="color: #000000;">More bad weather? Seems to be the story around here. But
+                        a 'severe threat'... </p>
+                </div>
+                <div class="choices">
+                    <button class="choice-button1" data-reputation-change="+10">1</button>
+                    <button class="choice-button2" data-reputation-change="-5">2</button>
+                    <button class="choice-button3" data-reputation-change="-10">3</button>
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-13" class="scene">
+                <div class="reputation-bar">
+                    <div class="reputation-value-bar">
+                        <div class="reputation-value"></div>
+                    </div>
+                    <span class="reputation-label">Supervisor Reputation</span>
+                </div>
+                <div class="background"><img src="images/bg7.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char4.png">
+                </div>
+                <div class="character2-container">
+                    <img src="characters/map.png">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">The shift supervisor re-enters the room, looking
+                        somewhat troubled. Andrey watches him intently.</p>
+                </div>
+                <div class="choices">
+                    <button class="choice-button1" data-reputation-change="+10">1</button>
+                    <button class="choice-button2" data-reputation-change="-5">2</button>
+                    <button class="choice-button3" data-reputation-change="-10">3</button>
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-14" class="scene">
+                <div class="reputation-bar">
+                    <div class="reputation-value-bar">
+                        <div class="reputation-value"></div>
+                    </div>
+                    <span class="reputation-label">Supervisor Reputation</span>
+                </div>
+                <div class="background"><img src="images/bg7.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char4.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">The shift supervisor re-enters the room, looking
+                        somewhat troubled. Andrey watches him intently.</p>
+                </div>
+                <div class="choices">
+                    <button class="choice-button1" data-reputation-change="+10">1</button>
+                    <button class="choice-button2" data-reputation-change="-5">2</button>
+                    <button class="choice-button3" data-reputation-change="-10">3</button>
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-15" class="scene">
+                <div class="background"><img src="images/bg8.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey goes in search of his brother.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-16" class="scene">
+                <div class="background"><img src="images/bg9.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="">
+                </div>
+                <div class="character2-container">
+                    <img src="characters/map.png">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey continues his journey...</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-17" class="scene">
+                <div class="background"><img src="images/bg9.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="">
+                </div>
+                <div class="character2-container">
+                    <img src="characters/photos.png">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey begins to get lost in the forest..</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="showGame1" class="scene">
+                <div class="background"><img src="images/game1.png" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="game-area">
+                    <img id="item1" class="item" src="images/search.png" alt="Backpack" data-found="false">
+                    <img id="item2" class="item" src="images/search.png" alt="Bottle" data-found="false">
+                    <img id="item3" class="item" src="images/search.png" alt="Compass" data-found="false">
+                    <img id="item4" class="item" src="images/search.png" alt="flashlight" data-found="false">
+                    <img id="item5" class="item" src="images/search.png" alt="Map" data-found="false">
+                </div>
+                <div class="controls">
+                    <div class="score">Found clues: <span id="found">0</span></div>
+                    <div class="timer">Time: <span id="time">60</span></div>
+                </div>
+                <div class="message">Find the differences between the photos and the real place.</div>
+            </div>
+
+            <div id="scene-18" class="scene">
+                <div class="background"><img src="images/bg3.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="">
+                </div>
+                <div class="character2-container">
+                    <img src="characters/badguy2.png" style="width: 58vh;">
+                </div>
+                <div class=" text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">...</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-19" class="scene">
+                <div class="background"><img src="images/bg10.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #000000;">Andrey</p>
+                    <p class="dialogue" style="color: #000000;">Wait... that looks familiar! The way the trees are
+                        clustered... that's from Dimka's photo!</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-20" class="scene">
+                <div class="background"><img src="images/bg11.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char5.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #000000;">Andrey</p>
+                    <p class="dialogue" style="color: #000000;">Dimka!</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-21" class="scene">
+                <div class="background"><img src="images/bg12.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey and Dimka got to the car without incident.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-22" class="scene">
+                <div class="background"><img src="images/bg12.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey and Dimka got to the car without incident.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-23" class="scene">
+                <div class="background"><img src="images/bg13.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char6.png">
+                </div>
+                <div class="character2-container">
+                    <img src="characters/char8.png">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey walks around the village and tries to find
+                        someone to talk to.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-24" class="scene">
+                <div class="reputation-bar">
+                    <div class="reputation-value-bar">
+                        <div class="reputation-value"></div>
+                    </div>
+                    <span class="reputation-label">Taisiya Reputation</span>
+                </div>
+                <div class="background"><img src="images/bg15.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char8.png">
+                </div>
+                <div class="character2-container">
+                    <img src="characters/herbs.png">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">The hut is dimly lit, filled with the scent of dried
+                        herbs. Taisiya sits across a rough wooden table from Andrey, her piercing gaze fixed on him.</p>
+                </div>
+                <div class="choices">
+                    <button class="choice-button1" data-reputation-change="+15">1</button>
+                    <button class="choice-button2" data-reputation-change="+5">2</button>
+                    <button class="choice-button3" data-reputation-change="-15">3</button>
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-25" class="scene">
+                <div class="background"><img src="images/bg14.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char8.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Taisiya takes Andrey to a room prepared for the ritual
+                    </p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="showGame2" class="scene">
+                <div class="image-display">
+                    <img id="current-image" src="" alt="">
+                </div>
+                <input type="text" id="word-input" autocomplete="off" placeholder="Enter the runes you see!">
+                <div class="controls">
+                    <div class="timer">Time: <span id="time2">---</span></div>
+                    <div class="score">Correct: <span id="correct">0</span></div>
+                </div>
+                <div class="message"></div>
+            </div>
+
+            <div id="scene-26" class="scene">
+                <div class="background"><img src="images/bg16.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char8.png">
+                </div>
+                <div class="character2-container">
+                    <img src="characters/badguy2.png">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">Andrey falters, a wave of bone-chilling cold washing
+                        over him. The carved amulet in his hand feels like ice.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-28" class="scene">
+                <div class="background"><img src="images/bg14.jfif" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="character-container">
+                    <img src="characters/char8.png">
+                </div>
+                <div class="character2-container">
+                    <img src="">
+                </div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #525252;">Narrator</p>
+                    <p class="dialogue" style="color: #525252;">As Andrey reaches the final words of the banishment, the
+                        carved wooden amulet in his hand glows with a soft, white light.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+            <div id="scene-29" class="scene">
+                <div class="background"><img src="images/kot.jpg" width="100%" height="100%"
+                        style="border-radius: 3vh;"></div>
+                <div class="text-box">
+                    <p class="character-name" style="color: #636363;">Kot</p>
+                    <p class="dialogue" style="color: #525252;">Pick a scene.</p>
+                </div>
+                <div class="choices">
+                </div>
+                <button class="next-button">⮕</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="foregroung"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
