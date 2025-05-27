@@ -199,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         character2Container = scene1.querySelector('.character2-container');
         currentDialogueIndex = 0;
         playBgm("bgm1");
+        currentBGM.volume = newVolume;
         if (scene1) {
             nextButton.addEventListener('click', () => {
                 if (isTyping == false) {
@@ -278,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm1");
+        currentBGM.volume = newVolume;
 
         scene1.classList.remove('active');
         scene2.classList.add('active');
@@ -350,6 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm1");
+        currentBGM.volume = newVolume;
 
         scene2.classList.remove('active');
         scene3.classList.add('active');
@@ -414,6 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm2");
+        currentBGM.volume = newVolume;
 
         scene3.classList.remove('active');
         scene4.classList.add('active');
@@ -487,6 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene4.classList.remove('active');
         scene5.classList.add('active');
@@ -550,6 +555,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene5.classList.remove('active');
         scene6.classList.add('active');
@@ -610,6 +616,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene6.classList.remove('active');
         scene7.classList.add('active');
@@ -757,6 +764,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene7.classList.remove('active');
         scene8.classList.add('active');
@@ -1012,6 +1020,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm4");
+        currentBGM.volume = newVolume;
 
         scene8.classList.remove('active');
         scene10.classList.remove('active');
@@ -1143,6 +1152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene8.classList.remove('active');
         scene10.classList.add('active');
@@ -1220,6 +1230,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm2");
+        currentBGM.volume = newVolume;
 
         scene10.classList.remove('active');
         scene11.classList.add('active');
@@ -1256,6 +1267,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         console.log("1 = ");
                         playBgm("bgm5");
+                        currentBGM.volume = newVolume;
                         showSceneEnd();
                     }
                 }
@@ -1325,6 +1337,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm4");
+        currentBGM.volume = newVolume;
 
         videoScene.classList.remove('active');
         scene12.classList.add('active');
@@ -1453,6 +1466,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm4");
+        currentBGM.volume = newVolume;
 
         scene12.classList.remove('active');
         scene13.classList.add('active');
@@ -1529,6 +1543,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm4");
+        currentBGM.volume = newVolume;
 
         scene12.classList.remove('active');
         scene14.classList.add('active');
@@ -1595,6 +1610,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene13.classList.remove('active');
         scene14.classList.remove('active');
@@ -1659,6 +1675,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene15.classList.remove('active');
         scene16.classList.add('active');
@@ -1720,6 +1737,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm6");
+        currentBGM.volume = newVolume;
 
         scene15.classList.remove('active');
         scene17.classList.add('active');
@@ -1763,6 +1781,7 @@ document.addEventListener('DOMContentLoaded', () => {
         game1.classList.add('active');
         console.log("Game 1");
         playBgm("bgm6");
+        currentBGM.volume = newVolume;
         startGame();
     }
 
@@ -1844,6 +1863,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm2");
+        currentBGM.volume = newVolume;
 
         game1.classList.remove('active');
         scene18.classList.add('active');
@@ -1879,6 +1899,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     } else {
                         playBgm("bgm5");
+                        currentBGM.volume = newVolume;
                         showSceneEnd();
                     }
                 }
@@ -1973,6 +1994,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm1");
+        currentBGM.volume = newVolume;
 
         scene19.classList.remove('active');
         scene20.classList.add('active');
@@ -2051,6 +2073,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm7");
+        currentBGM.volume = newVolume;
 
         scene20.classList.remove('active');
         scene21.classList.add('active');
@@ -2116,6 +2139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene20.classList.remove('active');
         scene22.classList.add('active');
@@ -2186,6 +2210,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene13.classList.remove('active');
         scene14.classList.remove('active');
@@ -2301,6 +2326,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene23.classList.remove('active');
         scene24.classList.add('active');
@@ -2442,6 +2468,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm3");
+        currentBGM.volume = newVolume;
 
         scene24.classList.remove('active');
         scene25.classList.add('active');
@@ -2484,6 +2511,7 @@ document.addEventListener('DOMContentLoaded', () => {
         game2.classList.add('active');
         console.log("Game 2");
         playBgm("bgm8");
+        currentBGM.volume = newVolume;
         startGame2();
     }
 
@@ -2596,6 +2624,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm2");
+        currentBGM.volume = newVolume;
 
         game2.classList.remove('active');
         scene26.classList.add('active');
@@ -2631,6 +2660,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     } else {
                         playBgm("bgm5");
+                        currentBGM.volume = newVolume;
                         showSceneEndBad();
                     }
                 }
@@ -2676,6 +2706,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentDialogueIndex = 0;
         playBgm("bgm9");
+        currentBGM.volume = newVolume;
 
         game2.classList.remove('active');
         scene28.classList.add('active');
