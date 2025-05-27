@@ -98,6 +98,8 @@ audio {
     font-style: normal;
     color: white;
     font-size: 11vh;
+    text-align: center;
+    width: 87vh;
 }
 
 #main-menu button {
@@ -109,7 +111,7 @@ audio {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     transition: background-color 0.3s ease;
-    margin-left: 95vh;
+    margin-left: 93vh;
     font-family: "Rowdies", sans-serif;
     font-weight: 300;
     width: 18vh;
@@ -129,6 +131,8 @@ audio {
     font-style: normal;
     color: white;
     font-size: 8vh;
+    text-align: center;
+    width: 87vh;
 }
 
 #game-over-neutral h2,
@@ -140,6 +144,8 @@ audio {
     color: white;
     font-size: 3.5vh;
     padding: 0vh 5vh;
+    text-align: center;
+    width: 87vh;
 }
 
 #game-over-good h2 {
@@ -150,6 +156,8 @@ audio {
     color: white;
     font-size: 3vh;
     padding: 0vh 5vh;
+    text-align: center;
+    width: 87vh;
 }
 
 #game-over-menu h1 {
@@ -159,6 +167,8 @@ audio {
     font-style: normal;
     color: white;
     font-size: 11vh;
+    text-align: center;
+    width: 87vh;
 }
 
 #game-over-menu h2 {
@@ -168,6 +178,8 @@ audio {
     font-style: normal;
     color: white;
     font-size: 8vh;
+    text-align: center;
+    width: 87vh;
 }
 
 #game-over-menu button,
@@ -182,7 +194,7 @@ audio {
     background-color: #ffffff;
     color: rgb(255, 0, 0);
     transition: background-color 0.3s ease;
-    margin-left: 95vh;
+    margin-left: 93vh;
     font-family: "Rowdies", sans-serif;
     font-weight: 300;
     width: 18vh;
