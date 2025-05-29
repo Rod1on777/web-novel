@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let finalChoice = 0;
     let map = false;
+    let newVolume = 1;
 
     let playerReputation = 50;
     const maxReputation = 100;
@@ -154,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('not all elements exist');
     }
 
-    let newVolume = 100;
     if (volumeSlider) {
         volumeSlider.addEventListener('input', (event) => {
             newVolume = parseFloat(event.target.value) / 100;
@@ -588,14 +588,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const scene7Data = [
         { name: "", text: "", color: "" },
         { name: "Andrey", text: "Hello. I'm here for my brother, Dmitry Ivanov. He works here.", color: "#000000" },
-        { name: "Narrator", text: "An old man in a sheepskin coat and earflap hat comes out of the guardhouse. His face is covered in wrinkles, his gaze seems empty but also piercing.", color: "#525252" },
+        { name: "Narrator", text: "An old man comes out of the guardhouse. His face is covered in wrinkles, his gaze seems empty but also piercing.", color: "#525252" },
         { name: "Filimon", text: "Ivanov... We have someone like that working here. And who are you to him?", color: "#946801" },
         { name: "Andrey", text: " I'm his brother, Andrey.", color: "#000000" },
         { name: "Andrey", text: "They told me he was supposed to be back from his shift, but he's still not here. I'm worried.", color: "#000000" },
         { name: "Filimon", text: "...", color: "#946801" },
         { name: "Filimon", text: "Worried, are you? ", color: "#946801" },
         { name: "Filimon", text: "That's your business.", color: "#946801" },
-        { name: "Filimon", text: "But it's nighttime now. This is a restricted area. I can't just let you in.", color: "#946801" },
+        { name: "Filimon", text: "But it's almost night. This is a restricted area. I can't just let you in.", color: "#946801" },
         { name: "Andrey", text: " I won't be long. Just need to find out where he is, if everything's okay.", color: "#000000" },
         { name: "Andrey", text: "I'd like to get in touch with him...", color: "#000000" },
         { name: "Narrator", text: "Filimon shakes his head", color: "#525252" },
@@ -682,13 +682,13 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Andrey", text: "Listen, Filimon...", color: "#000000" },
         //answer lines
         { name: "Filimon", text: "Family's important, I know that. But rules are rules. And out here... things aren't always as they seem.", color: "#946801" },
-        { name: "Filimon", text: "Safe is a relative word out here. He's... accounted for. For now. That's all I can say tonight.", color: "#946801" },
+        { name: "Filimon", text: "Safe is a relative word out here. He's... accounted for. For now.", color: "#946801" },
         { name: "Filimon", text: "I've told you what I can. Don't go making trouble where there isn't any. You're safe here for the night.", color: "#946801" },
         // -------------- 
+        { name: "Filimon", text: "That's all I can say tonight.", color: "#946801" },
         { name: "Andrey", text: "Maybe he stopped in some nearby village? I could drive there.", color: "#000000" },
         { name: "Filimon", text: "Where were you planning to spend the night? There are no hotels here. It's far to the city.", color: "#946801" },
         { name: "Andrey", text: "I'll figure something out. Maybe someone local will let me stay...", color: "#000000" },
-        { name: "Filimon", text: "You've got no business wandering around here at night.", color: "#946801" },
         { name: "Filimon", text: "Stay with me. There's enough room. ", color: "#946801" },
         { name: "Filimon", text: " We'll sort things out in the morning.", color: "#946801" },
         //player choices
@@ -733,14 +733,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Narrator", text: "He says this dryly, without emotion.", color: "#525252" },
         { name: "Narrator", text: "Filimon turns away, showing irritation.", color: "#525252" },
         // --------------
+        { name: "Narrator", text: "Filimon is silent for a couple of seconds.", color: "#525252" },
         { name: "Filimon", text: "We'll talk tomorrow.", color: "#946801" },
-        { name: "Filimon", text: "And don't go running around here. It's a restricted area.", color: "#946801" },
         { name: "Narrator", text: "Filimon gets up and walks to a cot in the corner of the guardhouse, indicating that the conversation is over", color: "#525252" },
         { name: "Andrey's Thoughts", text: "What's going on here? Why won't he let me leave? What is he hiding?", color: "#737373" },
         //final choice
         { name: "Andrey's Thoughts", text: "I'll run away from Filimon and go look for Dimka!", color: "#737373" },
         { name: "Andrey's Thoughts", text: "I'll stay here for now.", color: "#737373" },
-        { name: "Andrey's Thoughts", text: "I think I'd better listen to Philemon and stay with him for the night.", color: "#737373" },
+        { name: "Andrey's Thoughts", text: "I think I'd better listen to Fhilemon and stay with him for the night.", color: "#737373" },
         //choice line
         { name: "Andrey's Thoughts", text: "What should I do?", color: "#737373" },
     ];
@@ -2261,7 +2261,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "", text: "", color: "" },
         { name: "Taisiya", text: " So, young man, you seek your brother. Dmitry, was it? The one who toils at the cursed drilling site.", color: "#306e00" },
         { name: "Andrey", text: "Cursed? What do you mean?", color: "#000000" },
-        { name: "Taisiya", text: "That place... it has awakened something ancient, something dark.", color: "#306e00" },
+        { name: "Taisiya", text: "That place... it has awakened something ancient, something dark. Even if you have already found your brother, the ancient evil still threatens him.", color: "#306e00" },
         { name: "Taisiya", text: "Something that slumbers in these woods, especially as the Winter Solstice approaches.", color: "#306e00" },
         { name: "Andrey", text: "You mean... that thing on the television? The 'severe weather threat'?", color: "#000000" },
         { name: "Taisiya", text: "Weather. They try to give it a name that the city folk understand. But this is no mere storm, grandson. This is the breath of Karachun.", color: "#306e00" },
